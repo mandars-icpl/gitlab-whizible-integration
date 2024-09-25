@@ -10,9 +10,6 @@ namespace GitlabListner.Endpoint.Events.Issues
             // print the object in json 
             Console.WriteLine("Issue recived");
             Console.WriteLine("Project Id of the proejct is : " + issuesEvent.ObjectAttributes?.ProjectId);
-            // store json in a text file 
-            System.IO.File.WriteAllText("IssueEvent.json", JsonSerializer.Serialize(issuesEvent));
-
             return Results.Ok("Event Received");
         }
     }
