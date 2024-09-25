@@ -1,6 +1,6 @@
 ﻿namespace GitlabModels;
 
-public class ObjectAttributes
+public class ObjectAttributes : IModel
 {
     [JsonPropertyName("id")]
     public int Id { get; set; }

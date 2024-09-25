@@ -1,6 +1,6 @@
 ﻿namespace GitlabModels;
 
-public class Commit
+public class Commit : IModel
 {
 
     [JsonPropertyName("id")]

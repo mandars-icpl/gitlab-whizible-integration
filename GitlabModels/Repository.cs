@@ -1,6 +1,6 @@
 ﻿namespace GitlabModels;
 
-public class Repository
+public class Repository : IModel
 {
     public string? Name { get; set; }
     public string? Url { get; set; }

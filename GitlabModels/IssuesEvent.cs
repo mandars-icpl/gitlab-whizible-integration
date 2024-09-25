@@ -1,7 +1,6 @@
-﻿
-namespace GitlabModels;
+﻿namespace GitlabModels;
 
-public class IssuesEvent
+public class IssuesEvent : IModel
 {
     [JsonPropertyName("object_attributes")]
     public string? ObjectKind { get; set; }

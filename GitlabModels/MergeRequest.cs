@@ -1,6 +1,6 @@
 ﻿namespace GitlabModels;
 
-public class MergeRequest
+public class MergeRequest : IModel
 {
     [JsonPropertyName("id")]
     public int Id { get; set; }
@@ -51,7 +51,7 @@ public class MergeRequest
     public int Position { get; set; }
 
     [JsonPropertyName("labels")]
-    public List<Label> Labels { get; set; }
+    public List<Label> Labels { get; set; } = [];
 
     [JsonPropertyName("source")]
     public ProjectInfo? Source { get; set; }
