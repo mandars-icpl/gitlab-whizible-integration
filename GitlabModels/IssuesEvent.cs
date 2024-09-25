@@ -2,7 +2,7 @@
 
 public class IssuesEvent : IModel
 {
-    [JsonPropertyName("object_attributes")]
+    [JsonPropertyName("object_kind")]
     public string? ObjectKind { get; set; }
 
     [JsonPropertyName("event_type")]

@@ -5,10 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
-    <PublishAot>true</PublishAot>
+	  <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+	  <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApiAuth\ApiAuth.csproj" />
     <ProjectReference Include="..\GitlabModels\GitlabModels.csproj" />
   </ItemGroup>
 
