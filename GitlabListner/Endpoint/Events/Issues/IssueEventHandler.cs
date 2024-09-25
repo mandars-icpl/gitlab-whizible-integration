@@ -1,5 +1,4 @@
 ﻿using GitlabModels;
-using System.Text.Json;
 
 namespace GitlabListner.Endpoint.Events.Issues
 {
@@ -10,6 +9,7 @@ namespace GitlabListner.Endpoint.Events.Issues
             // print the object in json 
             Console.WriteLine("Issue recived");
             Console.WriteLine("Project Id of the proejct is : " + issuesEvent.ObjectAttributes?.ProjectId);
+            Console.WriteLine("Issue Title " + issuesEvent.ObjectAttributes);
             return Results.Ok("Event Received");
         }
     }
