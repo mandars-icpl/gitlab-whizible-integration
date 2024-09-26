@@ -9,7 +9,7 @@ builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.TypeInfoResolver = AppJsonSerializerContext.Default;
 });
 
-builder.Services.AddSingleton<IssueEventHandler>();
+builder.Services.AddSingleton<IssueEventListner>();
 
 // fetch the secret key from the environment
 var secret = Environment.GetEnvironmentVariable("GITLAB-TOKEN");
