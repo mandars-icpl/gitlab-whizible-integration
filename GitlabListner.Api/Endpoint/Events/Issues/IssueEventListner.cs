@@ -1,5 +1,4 @@
 ﻿using GitlabModels;
-using System.Text.Json;
 
 namespace GitlabListner.Endpoint.Events.Issues
 {
@@ -13,6 +12,11 @@ namespace GitlabListner.Endpoint.Events.Issues
             //Console.WriteLine(JsonSerializer.Serialize(issuesEvent));
             var issueId = issuesEvent.ObjectAttributes?.Id;
             var projectId = issuesEvent.ObjectAttributes?.ProjectId;
+
+            // if project has clean achitecture then the switch case below is valid in this file or should be somwhere else ? 
+
+
+
             switch (issuesEvent.ObjectAttributes?.Action)
             {
                 case "open":
