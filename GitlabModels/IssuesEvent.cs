@@ -2,7 +2,7 @@
 
 public class IssuesEvent : IModel
 {
-    [JsonPropertyName("object_attributes")]
+    [JsonPropertyName("object_kind")]
     public string? ObjectKind { get; set; }
 
     [JsonPropertyName("event_type")]
@@ -11,19 +11,25 @@ public class IssuesEvent : IModel
     [JsonPropertyName("user")]
     public User? User { get; set; }
 
-    [JsonPropertyName("project_id")]
-    public int ProjectId { get; set; }
-
     [JsonPropertyName("project")]
     public Project? Project { get; set; }
+
+    [JsonPropertyName("object_attributes")]
+    public IssueObjectAttributes? ObjectAttributes { get; set; }
 
     [JsonPropertyName("repository")]
     public Repository? Repository { get; set; }
 
-    [JsonPropertyName("object_attributes")]
-    public ObjectAttributes? ObjectAttributes { get; set; }
+    [JsonPropertyName("assignees")]
+    public List<User>? Assignees { get; set; }
 
-    [JsonPropertyName("merge_request")]
-    public MergeRequest? MergeRequest { get; set; }
+    [JsonPropertyName("assignee")]
+    public User? Assignee { get; set; }
+
+    [JsonPropertyName("labels")]
+    public List<Label>? Labels { get; set; }
+
+    [JsonPropertyName("changes")]
+    public Changes? Changes { get; set; }
 
 }

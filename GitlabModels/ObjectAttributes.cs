@@ -21,7 +21,7 @@ public class ObjectAttributes : IModel
     public string? UpdatedAt { get; set; }
 
     [JsonPropertyName("project_id")]
-    public string? ProjectId { get; set; }
+    public int ProjectId { get; set; }
 
     [JsonPropertyName("attachment")]
     public string? Attachment { get; set; }

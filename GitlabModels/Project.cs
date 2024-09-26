@@ -35,6 +35,9 @@ public class Project : IModel
     [JsonPropertyName("default_branch")]
     public string? DefaultBranch { get; set; }
 
+    [JsonPropertyName("ci_config_path")]
+    public string? CiConfigPath { get; set; }
+
     [JsonPropertyName("homepage")]
     public string? Homepage { get; set; }
 
