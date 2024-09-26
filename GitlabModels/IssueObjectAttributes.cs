@@ -13,13 +13,13 @@ public class IssueObjectAttributes : IModel
     public List<int> AssigneeIds { get; set; } = [];
 
     [JsonPropertyName("assignee_id")]
-    public int AssigneeId { get; set; }
+    public int? AssigneeId { get; set; }
 
     [JsonPropertyName("author_id")]
-    public int AuthorId { get; set; }
+    public int? AuthorId { get; set; }
 
     [JsonPropertyName("project_id")]
-    public int ProjectId { get; set; }
+    public int? ProjectId { get; set; }
 
     [JsonPropertyName("created_at")]
     public string? CreatedAt { get; set; }
@@ -28,46 +28,46 @@ public class IssueObjectAttributes : IModel
     public string? UpdatedAt { get; set; }
 
     [JsonPropertyName("updated_by_id")]
-    public int UpdatedById { get; set; }
+    public int? UpdatedById { get; set; }
 
     [JsonPropertyName("last_edited_at")]
     public string? LastEditedAt { get; set; }
 
     [JsonPropertyName("last_edited_by_id")]
-    public int LastEditedById { get; set; }
+    public int? LastEditedById { get; set; }
 
     [JsonPropertyName("relative_position")]
-    public int RelativePosition { get; set; }
+    public int? RelativePosition { get; set; }
 
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
     [JsonPropertyName("milestone_id")]
-    public int MilestoneId { get; set; }
+    public int? MilestoneId { get; set; }
 
     [JsonPropertyName("state_id")]
-    public int StateId { get; set; }
+    public int? StateId { get; set; }
 
     [JsonPropertyName("confidential")]
-    public bool Confidential { get; set; }
+    public bool? Confidential { get; set; }
 
     [JsonPropertyName("discussion_locked")]
-    public bool DiscussionLocked { get; set; }
+    public bool? DiscussionLocked { get; set; }
 
     [JsonPropertyName("due_date")]
     public string? DueDate { get; set; }
 
     [JsonPropertyName("moved_to_id")]
-    public int MovedToId { get; set; }
+    public int? MovedToId { get; set; }
 
     [JsonPropertyName("duplicated_to_id")]
-    public int DuplicatedToId { get; set; }
+    public int? DuplicatedToId { get; set; }
 
     [JsonPropertyName("time_estimate")]
-    public int TimeEstimate { get; set; }
+    public int? TimeEstimate { get; set; }
 
     [JsonPropertyName("total_time_spent")]
-    public int TotalTimeSpent { get; set; }
+    public int? TotalTimeSpent { get; set; }
 
     [JsonPropertyName("human_total_time_spent")]
     public string? HumanTotalTimeSpent { get; set; }
@@ -79,10 +79,10 @@ public class IssueObjectAttributes : IModel
     public string? HumanTimeChange { get; set; }
 
     [JsonPropertyName("weight")]
-    public int Weight { get; set; }
+    public int? Weight { get; set; }
 
     [JsonPropertyName("iid")]
-    public int Iid { get; set; }
+    public int? Iid { get; set; }
 
     [JsonPropertyName("url")]
     public string? Url { get; set; }
