@@ -1,9 +1,9 @@
-﻿namespace GitlabModels;
+﻿namespace Gitlab.Models;
 
 public class Label : IModel
 {
     [JsonPropertyName("id")]
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     [JsonPropertyName("title")]
     public string? Title { get; set; }
@@ -30,5 +30,5 @@ public class Label : IModel
     public string? Type { get; set; }
 
     [JsonPropertyName("group_id")]
-    public int GroupId { get; set; }
+    public int? GroupId { get; set; }
 }

@@ -1,7 +1,3 @@
-using GitlabListner;
-using GitlabListner.Endpoint.Events;
-using GitlabListner.Endpoint.Events.Issues;
-
 var builder = WebApplication.CreateSlimBuilder(args);
 
 builder.Services.ConfigureHttpJsonOptions(options =>
@@ -9,7 +5,9 @@ builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.TypeInfoResolver = AppJsonSerializerContext.Default;
 });
 
-builder.Services.AddSingleton<IssueEventHandler>();
+builder.Services.AddSingleton<IssueEventListener>();
+builder.Services.AddGitlabInfrastructureServices(builder.Configuration);
+
 
 // fetch the secret key from the environment
 var secret = Environment.GetEnvironmentVariable("GITLAB-TOKEN");

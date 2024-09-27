@@ -1,4 +1,4 @@
-﻿namespace GitlabModels;
+﻿namespace Gitlab.Models;
 
 public class IssueObjectAttributes : IModel
 {

@@ -2,13 +2,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35309.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitlabModels", "GitlabModels\GitlabModels.csproj", "{5C094187-03B8-47B8-9B6C-80786A136EAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gitlab.Models", "Gitlab.Models\Gitlab.Models.csproj", "{5C094187-03B8-47B8-9B6C-80786A136EAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitlabListner", "GitlabListner\GitlabListner.csproj", "{8BA51356-2490-4AA9-82CE-80041855345E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitlabListener.Api", "GitlabListner.Api\GitlabListener.Api.csproj", "{8BA51356-2490-4AA9-82CE-80041855345E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{5AF0ADE1-FCFF-4C27-B034-4C1B1E5E00DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiAuth", "ApiAuth\ApiAuth.csproj", "{359D4C25-18CF-434B-BD3D-3A3C8B62C5F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gitlab.Infrastructure", "Gitlab.Infrastructure\Gitlab.Infrastructure.csproj", "{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{359D4C25-18CF-434B-BD3D-3A3C8B62C5F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{359D4C25-18CF-434B-BD3D-3A3C8B62C5F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{359D4C25-18CF-434B-BD3D-3A3C8B62C5F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

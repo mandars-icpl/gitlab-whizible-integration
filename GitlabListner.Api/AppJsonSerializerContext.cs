@@ -1,7 +1,6 @@
-﻿using GitlabModels;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace GitlabListner;
+namespace GitlabListener;
 
 
 [JsonSerializable(typeof(IssuesEvent))]
