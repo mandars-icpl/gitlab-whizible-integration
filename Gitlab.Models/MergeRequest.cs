@@ -1,4 +1,6 @@
-﻿namespace GitlabModels;
+﻿using Gitlab.Models;
+
+namespace GitlabModels;
 
 public class MergeRequest : IModel
 {

@@ -1,6 +1,6 @@
 ﻿namespace Common
 {
-    internal interface IWModel
+    public interface IWModel
     {
     }
 }
