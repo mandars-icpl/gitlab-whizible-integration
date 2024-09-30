@@ -10,7 +10,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\ApiAuth\ApiAuth.csproj" />
-		<ProjectReference Include="..\Gitlab.Infrastructure\Gitlab.Infrastructure.csproj" />
+		<ProjectReference Include="..\Gitlab.Domain\Gitlab.Domain.csproj" />
 		<ProjectReference Include="..\Gitlab.Models\Gitlab.Models.csproj" />
 	</ItemGroup>
 

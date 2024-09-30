@@ -6,7 +6,6 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 });
 
 builder.Services.AddSingleton<IssueEventListener>();
-builder.Services.AddGitlabInfrastructureServices(builder.Configuration);
 
 
 // fetch the secret key from the environment
