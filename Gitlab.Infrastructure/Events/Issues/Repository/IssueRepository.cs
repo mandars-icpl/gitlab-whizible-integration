@@ -1,5 +1,5 @@
 ﻿
-using Gitlab.Domain.Repositories.Issues;
+using Gitlab.Domain.Repositories;
 
 public class IssueRepository : IIssueEventRepository
 {

@@ -3,9 +3,9 @@
 public class IssueEventListener
 {
 
-    private readonly IssueEventService _issueEventService;
+    private readonly IIssueEventService _issueEventService;
 
-    public IssueEventListener(IssueEventService issueEventService)
+    public IssueEventListener(IIssueEventService issueEventService)
     {
         _issueEventService = issueEventService;
     }

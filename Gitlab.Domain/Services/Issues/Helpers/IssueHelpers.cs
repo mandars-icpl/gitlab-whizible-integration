@@ -1,4 +1,4 @@
-﻿namespace Gitlab.Domain.Services.Issues.Helpers;
+﻿namespace Gitlab.Domain.Services;
 
 internal static class IssueHelpers
 {

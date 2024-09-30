@@ -1,6 +1,6 @@
-﻿namespace Gitlab.Domain.Services.Issues;
+﻿namespace Gitlab.Domain.Services;
 
-internal interface IIssueEventService
+public interface IIssueEventService
 {
     Task AddIssueEvent(IssuesEvent issuesEvent);
     Task UpdateIssueEvent(IssuesEvent issuesEvent);

@@ -1,8 +1,4 @@
-﻿using Gitlab.Domain.Repositories.Issues;
-using Gitlab.Domain.Services.Issues.Helpers;
-using Gitlab.Models;
-
-namespace Gitlab.Domain.Services.Issues;
+﻿namespace Gitlab.Domain.Services;
 
 public class IssueEventService(IIssueEventRepository issueEventRepository) : IIssueEventService
 {

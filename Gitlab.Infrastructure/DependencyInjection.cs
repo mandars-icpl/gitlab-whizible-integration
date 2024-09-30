@@ -1,11 +1,11 @@
-﻿
-namespace Gitlab.Infrastructure;
+﻿namespace GitlabListener.Infrastrucutre;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddGitlabInfrastructureServices(this IServiceCollection service, IConfiguration configuration)
+    public static IServiceCollection AddGitlabInfrastructure(this IServiceCollection services)
     {
-
-        return service;
+        services.AddScoped<IIssueEventService, IssueEventService>();
+        services.AddScoped<IIssueEventRepository, IssueRepository>();
+        return services;
     }
 }

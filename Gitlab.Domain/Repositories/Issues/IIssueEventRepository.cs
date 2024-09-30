@@ -1,4 +1,4 @@
-﻿namespace Gitlab.Domain.Repositories.Issues;
+﻿namespace Gitlab.Domain.Repositories;
 
 public interface IIssueEventRepository
 {

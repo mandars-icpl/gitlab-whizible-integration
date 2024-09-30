@@ -2,5 +2,5 @@
 global using GitlabListener.Endpoint.Events;
 global using GitlabListener.Endpoint.Events.Issues;
 global using Gitlab.Models;
-global using Gitlab.Domain.Services.Issues;
-global using Microsoft.Extensions.DependencyInjection;
+global using Gitlab.Domain.Services;
+global using GitlabListener.Infrastrucutre;
