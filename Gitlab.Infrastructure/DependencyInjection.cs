@@ -1,4 +1,4 @@
-﻿namespace GitlabListener.Infrastrucutre;
+﻿namespace Gitlab.Infrastructure;
 
 public static class DependencyInjection
 {
