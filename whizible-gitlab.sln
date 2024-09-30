@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiAuth", "ApiAuth\ApiAuth.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gitlab.Infrastructure", "Gitlab.Infrastructure\Gitlab.Infrastructure.csproj", "{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gitlab.Domain", "Gitlab.Domain\Gitlab.Domain.csproj", "{D78CB9D2-F720-4FAB-820B-0C4CE5F5233D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF3CC5C3-D1BF-42E1-A147-37AAA5E5D259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78CB9D2-F720-4FAB-820B-0C4CE5F5233D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78CB9D2-F720-4FAB-820B-0C4CE5F5233D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78CB9D2-F720-4FAB-820B-0C4CE5F5233D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78CB9D2-F720-4FAB-820B-0C4CE5F5233D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
