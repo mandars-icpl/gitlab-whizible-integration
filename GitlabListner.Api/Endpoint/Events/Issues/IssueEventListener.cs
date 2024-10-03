@@ -2,13 +2,10 @@
 
 public class IssueEventListener
 {
-
     private readonly IIssueEventService _issueEventService;
 
-    public IssueEventListener(IIssueEventService issueEventService)
-    {
-        _issueEventService = issueEventService;
-    }
+    // Constructor with dependency injection
+    public IssueEventListener(IIssueEventService issueEventService) => _issueEventService = issueEventService ?? throw new ArgumentNullException(nameof(issueEventService));
 
     public async Task<IResult> Handler(IssuesEvent issuesEvent)
     {
@@ -16,12 +13,12 @@ public class IssueEventListener
         var issueId = issuesEvent.ObjectAttributes?.Id;
         var projectId = issuesEvent.ObjectAttributes?.ProjectId;
 
-        // action open (new issue created), close (issue closed), update (issue updated), reopen (issue reopened)
+        // Action could be open (new issue created), close (issue closed), update (issue updated), reopen (issue reopened)
         var actionPerformed = issuesEvent.ObjectAttributes?.Action;
         switch (actionPerformed)
         {
             case "open":
-                Console.WriteLine($"Issue {issueId} of project {projectId} Opened");
+                //Console.WriteLine($"Issue {issueId} of project {projectId} Opened");
                 await _issueEventService.AddIssueEvent(issuesEvent);
                 break;
             case "close":
@@ -35,6 +32,7 @@ public class IssueEventListener
                 Console.WriteLine($"Issue {issueId} of project {projectId} Reopened");
                 break;
             default:
+                Console.WriteLine("Unknown action performed.");
                 break;
         }
         return Results.Ok("Event Received");
