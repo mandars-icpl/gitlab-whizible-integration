@@ -6,6 +6,7 @@ public static class DependencyInjection
     {
         services.AddScoped<IIssueEventService, IssueEventService>();
         services.AddScoped<IIssueEventRepository, IssueRepository>();
+        
         return services;
     }
 }
