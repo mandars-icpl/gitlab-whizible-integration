@@ -8,7 +8,7 @@ public class WzIssue : IWModel
 
     public string? Description { get; set; }
 
-    public string? ReportedBy { get; set; }
+    public int? ReportedBy { get; set; }
 
     public string? ReportedDate { get; set; }
 
@@ -29,7 +29,7 @@ public class WzIssue : IWModel
     // Severity : Block, Crash, Feature, Major, Minor, Text, Trivial, Tweak
     public string? Severity { get; set; }
 
-    public string? ResponsiblePerson { get; set; }
+    public int? ResponsiblePerson { get; set; }
 
     /* Root Cause 
         Data Issue

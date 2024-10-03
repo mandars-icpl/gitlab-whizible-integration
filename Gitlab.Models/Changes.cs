@@ -3,10 +3,10 @@
     public class Changes : IModel
     {
         [JsonPropertyName("updated_by_id")]
-        public ChangeUpdatedModel<int>? UpdatedById { get; set; }
+        public ChangeUpdatedModel<int?>? UpdatedById { get; set; }
 
         [JsonPropertyName("updated_at")]
-        public ChangeUpdatedModel<string>? UpdatedAt { get; set; }
+        public ChangeUpdatedModel<string?>? UpdatedAt { get; set; }
 
         [JsonPropertyName("labels")]
         public ChangeLabelModel? Labels { get; set; }

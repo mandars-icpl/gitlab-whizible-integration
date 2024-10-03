@@ -1,7 +1,5 @@
-
-using Gitlab.Infrastructure;
-
 var builder = WebApplication.CreateSlimBuilder(args);
+
 
 builder.Services.ConfigureHttpJsonOptions(options =>
 {
@@ -13,9 +11,10 @@ builder.Services.AddTransient<IssueEventListener>();
 
 // fetch the secret key from the environment
 var secret = Environment.GetEnvironmentVariable("GITLAB-TOKEN");
+var port = Environment.GetEnvironmentVariable("PORT") ?? "6000";
 
 var app = builder.Build();
-
+app.Urls.Add($"http://*:{port}");
 app.UseMiddleware<ApiAuth.GitlabSecretKeyCheck>(secret);
 app.MapGroup("/api/events").EventEndpoint();
 app.MapGet("/", () => "Hello World!");

@@ -10,8 +10,11 @@ public class IssueEventService(IIssueEventRepository issueEventRepository) : IIs
         await issueEventRepository.AddIssueToQueue(issuesEvent, labels);
     }
 
-    public Task UpdateIssueEvent(IssuesEvent issuesEvent)
+    public async Task UpdateIssueEvent(IssuesEvent issuesEvent)
     {
-        throw new NotImplementedException();
+        var labelsField = issuesEvent.Labels ?? [];
+        var labels = IssueHelpers.ProcessLabels(labelsField);
+
+        await issueEventRepository.AddIssueToQueue(issuesEvent, labels);
     }
 }

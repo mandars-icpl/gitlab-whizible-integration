@@ -5,12 +5,12 @@ internal static class IssueHelpers
     public static Dictionary<string, string> ProcessLabels(IEnumerable<Label> labels)
     {
         var keyValuePairs = new Dictionary<string, string>();
-
+        
         foreach (var label in labels)
         {
-            var parts = label.Title.Split('-', 2).Select(x => x.Trim()).ToArray();
+            var parts = label.Title?.Split('-', 2).Select(x => x.Trim()).ToArray();
 
-            if (parts.Length == 2)
+            if (parts?.Length == 2)
             {
                 var key = parts[0];
                 var value = parts[1];

@@ -1,10 +1,11 @@
-﻿
-using Gitlab.Domain.Repositories;
+﻿using Gitlab.Infrastructure.Events.Issues;
 
 public class IssueRepository : IIssueEventRepository
 {
     public Task AddIssueToQueue(IssuesEvent issuesEvent, Dictionary<string, string> fields)
     {
-        throw new NotImplementedException();
+        var issueInfoForWhizible = IssueMapper.MapToWzIssue(issuesEvent, fields);
+        Console.WriteLine(issueInfoForWhizible);
+        return Task.CompletedTask;
     }
 }
