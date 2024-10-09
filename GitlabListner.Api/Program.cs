@@ -1,13 +1,4 @@
-var builder = WebApplication.CreateSlimBuilder(args);
-
-
-builder.Services.ConfigureHttpJsonOptions(options =>
-{
-    options.SerializerOptions.TypeInfoResolver = AppJsonSerializerContext.Default;
-});
-
-
-// add jsonserialization for the Gitlab.Infrastructure whichi s InfrastructureSerializer
+var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddGitlabInfrastructure();
 builder.Services.AddTransient<IssueEventListener>();
@@ -26,8 +17,11 @@ if (!builder.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<ApiAuth.GitlabSecretKeyCheck>(secret);
-app.MapGroup("/api/events").EventEndpoint();
+//app.MapGroup("/api/events").EventEndpoint();
 app.MapGet("/", () => "Hello World!");
+app.MapGet("/api/events", static () => Results.Ok("This endpoint handles webhook trigger events for different events such as issues, push , etc"));
+app.MapPost("/api/events/issues/", (IssueEventListener handler, IssuesEvent issuesEvent) => handler.Handler(issuesEvent));
+app.UseHttpsRedirection();
 app.Run();
 
 

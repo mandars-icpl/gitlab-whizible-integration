@@ -53,7 +53,7 @@ public class MergeRequest : IModel
     public int Position { get; set; }
 
     [JsonPropertyName("labels")]
-    public List<Label> Labels { get; set; } = [];
+    public List<Label> Labels { get; set; }
 
     [JsonPropertyName("source")]
     public ProjectInfo? Source { get; set; }

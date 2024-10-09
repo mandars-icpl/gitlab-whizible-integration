@@ -3,9 +3,15 @@ using Microsoft.Extensions.Primitives;
 
 namespace ApiAuth
 {
-    public class GitlabSecretKeyCheck(RequestDelegate next, string xApiToken)
+    public class GitlabSecretKeyCheck
     {
-        private readonly RequestDelegate _next = next;
+        private readonly RequestDelegate _next;
+        private readonly string xApiToken;
+        public GitlabSecretKeyCheck(RequestDelegate next, string xApiToken)
+        {
+            _next = next;
+            this.xApiToken = xApiToken;
+        }
 
         public async Task InvokeAsync(HttpContext httpContext)
         {

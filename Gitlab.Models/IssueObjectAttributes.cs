@@ -7,10 +7,10 @@ public class IssueObjectAttributes : IModel
     public int Id { get; set; }
 
     [JsonPropertyName("title")]
-    public required string Title { get; set; }
+    public string? Title { get; set; }
 
     [JsonPropertyName("assignee_ids")]
-    public List<int> AssigneeIds { get; set; } = [];
+    public List<int> AssigneeIds { get; set; }
 
     [JsonPropertyName("assignee_id")]
     public int? AssigneeId { get; set; }
@@ -103,7 +103,9 @@ public class IssueObjectAttributes : IModel
     public EscalationPolicy? EscalationPolicy { get; set; }
 
     [JsonPropertyName("labels")]
-    public List<Label> Labels { get; set; } = [];
+    public List<Label> Labels { get; set; }
+
+
 
 
 }

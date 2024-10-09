@@ -10,8 +10,9 @@ public class IssueRepository : IIssueEventRepository
 
         var issueInfoForWhizible = IssueMapper.MapToWzIssue(issuesEvent, fields);
 
+
         // Serialize the issue object
-        var jsonString = InfraHelpers.FormatJsonString(issueInfoForWhizible, InfrastructureSerializer.Default.WzIssue);
+        var jsonString = CommonHelpers.FormatJsonString(issueInfoForWhizible, typeof(WzIssue)); // Use typeof(WzIssue)
 
         // Get the path of the Python scripts
         string scriptPath = Environment.GetEnvironmentVariable("WHIZIBLE_PLAYWRIGHT_SCRIPT_PATH", EnvironmentVariableTarget.User) ?? "C:\\whizible-scripts\\";

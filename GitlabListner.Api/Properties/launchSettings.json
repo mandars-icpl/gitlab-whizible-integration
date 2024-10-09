@@ -1,15 +1,24 @@
 {
-  "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "http": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://0.0.0.0:6001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "GITLAB-TOKEN": "BuzkCbv6sNMKhAnx8H32Pg"
-      }
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://0.0.0.0:6001"
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GITLAB-TOKEN": "BuzkCbv6sNMKhAnx8H32Pg"
+      },
+      "applicationUrl": "https://0.0.0.0:6001"
     }
-  }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json"
 }
