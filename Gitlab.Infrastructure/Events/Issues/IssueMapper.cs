@@ -1,4 +1,5 @@
-﻿namespace Gitlab.Infrastructure.Events.Issues;
+﻿
+namespace Gitlab.Infrastructure.Events.Issues;
 
 public static class IssueMapper
 {
@@ -7,7 +8,7 @@ public static class IssueMapper
         return new WzIssue
         {
             ProjectName = issuesEvent.Project?.Name,
-            Summary = issuesEvent.ObjectAttributes?.Title,
+            Summary = SummaryFormat(issuesEvent.ObjectAttributes?.Id, issuesEvent.ObjectAttributes?.Title),
             Description = issuesEvent.ObjectAttributes?.Description,
             ReportedBy = issuesEvent.User?.Id,
             ReportedDate = issuesEvent.ObjectAttributes?.CreatedAt,
@@ -22,5 +23,11 @@ public static class IssueMapper
             RootCause = fields.ContainsKey("RootCause") ? fields["RootCause"] : null
         };
     }
+
+    private static string SummaryFormat(int? eventId, string? eventTitlle)
+    {
+        return $"GTL-{eventId} {eventTitlle}";
+    }
+
 
 }

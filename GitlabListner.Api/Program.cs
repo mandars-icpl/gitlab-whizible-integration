@@ -10,15 +10,15 @@ var secret = Environment.GetEnvironmentVariable("GITLAB-TOKEN");
 var app = builder.Build();
 
 
-if (!builder.Environment.IsDevelopment())
+if (builder.Environment.IsDevelopment())
 {
-    var port = Environment.GetEnvironmentVariable("PORT") ?? "5102";
-    app.Urls.Add($"http://*:{port}");
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "6001";
+    builder.WebHost.UseUrls($"https://*:{port}");
 }
 
 app.UseMiddleware<ApiAuth.GitlabSecretKeyCheck>(secret);
 //app.MapGroup("/api/events").EventEndpoint();
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Gitlab Listner api!");
 app.MapGet("/api/events", static () => Results.Ok("This endpoint handles webhook trigger events for different events such as issues, push , etc"));
 app.MapPost("/api/events/issues/", (IssueEventListener handler, IssuesEvent issuesEvent) => handler.Handler(issuesEvent));
 app.UseHttpsRedirection();
