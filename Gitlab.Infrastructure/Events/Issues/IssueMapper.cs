@@ -24,9 +24,9 @@ public static class IssueMapper
         };
     }
 
-    private static string SummaryFormat(int? eventId, string? eventTitlle)
+    private static string SummaryFormat(int? eventId, string? eventTitle)
     {
-        return $"GTL-{eventId} {eventTitlle}";
+        return $"GTL-{eventId} {eventTitle}";
     }
 
 

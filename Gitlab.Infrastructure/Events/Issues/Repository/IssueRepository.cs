@@ -1,6 +1,4 @@
 ﻿using Gitlab.Infrastructure.Events.Issues;
-using Gitlab.Infrastructure.Helpers;
-using Gitlab.Infrastructure;
 
 public class IssueRepository : IIssueEventRepository
 {

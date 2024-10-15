@@ -4,7 +4,7 @@ namespace Common;
 
 public static class CommonHelpers
 {
-    public static string FormatJsonString(object objectToFormat, Type type)
+    public static string? FormatJsonString(object objectToFormat, Type type)
     {
         if (objectToFormat == null)
         {

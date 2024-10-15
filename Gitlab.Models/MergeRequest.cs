@@ -1,6 +1,4 @@
-﻿using Gitlab.Models;
-
-namespace GitlabModels;
+﻿namespace Gitlab.Models;
 
 public class MergeRequest : IModel
 {
@@ -53,7 +51,7 @@ public class MergeRequest : IModel
     public int Position { get; set; }
 
     [JsonPropertyName("labels")]
-    public List<Label> Labels { get; set; }
+    public List<Label> Labels { get; set; } = new List<Label>();
 
     [JsonPropertyName("source")]
     public ProjectInfo? Source { get; set; }

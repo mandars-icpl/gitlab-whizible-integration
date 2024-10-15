@@ -4,7 +4,7 @@ namespace Common;
 
 public static class ProcessHelpers
 {
-    public static void ExecuteScripts(string command, string arguments, string workingDirectory = null)
+    public static void ExecuteScripts(string command, string arguments, string? workingDirectory = null)
     {
         // Execute the script
         var process = new Process

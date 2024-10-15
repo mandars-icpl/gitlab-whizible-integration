@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization.Metadata;
-
-namespace Gitlab.Infrastructure.Helpers;
+﻿namespace Gitlab.Infrastructure.Helpers;
 
 internal static class InfraHelpers
 {
