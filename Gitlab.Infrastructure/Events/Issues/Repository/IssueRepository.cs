@@ -19,8 +19,10 @@ public class IssueRepository : IIssueEventRepository
         //ProcessHelpers.ExecuteScripts("python", $"{scriptPath}\\create_issue.py \"{jsonString}\"", scriptPath);
 
         var currentDirectory = Environment.CurrentDirectory;
+        var whizibleUsername = Environment.GetEnvironmentVariable("WHIZIBLE-USERNAME");
+        var whiziblePassword = Environment.GetEnvironmentVariable("WHIZIBLE-PASSWORD");
 
-        ProcessHelpers.ExecuteScripts(Path.Combine(currentDirectory, "Scripts\\create_issue.exe"), $"\"{jsonString}\"");
+        ProcessHelpers.ExecuteScripts(Path.Combine(currentDirectory, "Scripts\\create_issue.exe"), $"\"{jsonString}\" {whizibleUsername} {whiziblePassword}");
 
 
         return Task.CompletedTask;

@@ -16,7 +16,9 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "GITLAB-TOKEN": "BuzkCbv6sNMKhAnx8H32Pg",
-        "PORT": "6001"
+        "PORT": "6001",
+        "WHIZIBLE-USERNAME": "user",
+        "WHIZIBLE-PASSWORD": "pass",
       },
       "applicationUrl": "https://0.0.0.0:6001"
     }
