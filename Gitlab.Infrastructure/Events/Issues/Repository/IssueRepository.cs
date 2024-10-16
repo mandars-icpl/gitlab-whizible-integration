@@ -13,10 +13,15 @@ public class IssueRepository : IIssueEventRepository
         var jsonString = CommonHelpers.FormatJsonString(issueInfoForWhizible, typeof(WzIssue)); // Use typeof(WzIssue)
 
         // Get the path of the Python scripts
-        string scriptPath = Environment.GetEnvironmentVariable("WHIZIBLE_PLAYWRIGHT_SCRIPT_PATH", EnvironmentVariableTarget.User) ?? "C:\\whizible-scripts\\";
+        //string scriptPath = Environment.GetEnvironmentVariable("WHIZIBLE_PLAYWRIGHT_SCRIPT_PATH", EnvironmentVariableTarget.User) ?? "C:\\whizible-scripts\\";
 
         // Pass jsonString as an argument to the script and scriptPath as the working directory
-        ProcessHelpers.ExecuteScripts("python", $"{scriptPath}\\create_issue.py \"{jsonString}\"", scriptPath);
+        //ProcessHelpers.ExecuteScripts("python", $"{scriptPath}\\create_issue.py \"{jsonString}\"", scriptPath);
+
+        var currentDirectory = Environment.CurrentDirectory;
+
+        ProcessHelpers.ExecuteScripts(Path.Combine(currentDirectory, "Scripts\\create_issue.exe"), $"\"{jsonString}\"");
+
 
         return Task.CompletedTask;
     }

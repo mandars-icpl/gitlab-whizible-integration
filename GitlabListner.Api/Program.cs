@@ -17,7 +17,6 @@ if (builder.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<ApiAuth.GitlabSecretKeyCheck>(secret);
-//app.MapGroup("/api/events").EventEndpoint();
 app.MapGet("/", () => "Gitlab Listener api!");
 app.MapGet("/api/events", static () => Results.Ok("This endpoint handles webhook trigger events for different events such as issues, push , etc"));
 app.MapPost("/api/events/issues/", (IssueEventListener handler, IssuesEvent issuesEvent) => handler.Handler(issuesEvent));
